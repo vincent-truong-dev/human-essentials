@@ -1,6 +1,7 @@
 class AddOneStepPartnerInviteToOrganization < ActiveRecord::Migration[7.0]
   def change
-    add_column :organizations, :one_step_partner_invite, :boolean, null: false
+    add_column :organizations, :one_step_partner_invite, :boolean
     change_column_default :organizations, :one_step_partner_invite, false
+    change_column_null :organizations, :one_step_partner_invite, false
   end
 end
